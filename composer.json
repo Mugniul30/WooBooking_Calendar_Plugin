@@ -1,0 +1,19 @@
+{
+    "name": "mugniul/woobooking",
+    "description": "A flexible booking calendar with time slot management for WooCommerce.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Mugniul30",
+            "email": "mugniulafif@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Woobooking\\": "includes/"
+        }
+    }
+}

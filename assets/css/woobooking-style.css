@@ -1,0 +1,205 @@
+/* Calendar styling */
+.flatpickr-calendar {
+    width: 100%;
+    padding: 25px;
+    box-shadow: none;
+}
+
+.flatpickr-rContainer {
+    width: 100%;
+    /* Adjusted for proper responsiveness */
+}
+
+.flatpickr-weekdaycontainer {
+    width: 100%;
+}
+
+.flatpickr-calendar .flatpickr-days .dayContainer {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr);
+    /* 7 columns for the days of the week */
+    gap: 10px 34px;
+    /* Adjusted gap */
+    padding: 10px 20px;
+}
+
+.flatpickr-days {
+    overflow: initial;
+}
+
+/* Green dot for available dates */
+.flatpickr-day.available::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: #28a745;
+    /* Green dot */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Red dot for booked dates */
+.flatpickr-day.booked::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: #ff4d4d;
+    /* Red dot */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Booked dates */
+.flatpickr-day.booked {
+    opacity: 0.6;
+    color: #666;
+    pointer-events: none;
+    border: 1px solid #e5e5e5;
+}
+
+/* General day styling */
+.flatpickr-day {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-radius: 0;
+    position: relative;
+    transition: background 0.3s, color 0.3s;
+    background: transparent !important;
+    color: #333;
+    border: 1px solid #e5e5e5;
+}
+
+.flatpickr-day.selected {
+    border: 1px solid #DD0000;
+}
+
+.flatpickr-day.selected:hover {
+    border: 1px solid #FF2700;
+    color: #333;
+}
+
+.flatpickr-month {
+    margin-bottom: 10px;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    padding: 10px;
+    opacity: 0.3;
+    pointer-events: none;
+    filter: blur(1px);
+}
+
+.flatpickr-day.selected {
+    color: #333;
+    background: #f4f2f2 !important;
+    /* Highlight selected date */
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    padding: 25px;
+}
+
+.flatpickr-current-month {
+    padding: 0;
+}
+
+/* Time slots in inline-flex layout */
+/* Updated Slot Styles */
+#slots {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button.slot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space between text and price */
+    padding: 12px 18px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    min-width: 150px;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+}
+
+button.slot:hover {
+    background: #f9f9f9;
+    /* Hover effect with red background */
+    color: #fff;
+}
+
+button.slot:focus {
+    color: #fff;
+    border-color: #f9f9f9;
+}
+
+/* Toggle appearance - replace the left toggle with the blue filled circle from the right */
+button.slot input[type="radio"] {
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #a80f0f;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active/Selected radio button */
+input.slot-radio:checked {
+    background-color: #a80f0f;
+    border-color: #f9f9f9;
+}
+
+button.slot input[type="radio"]:checked+.slot-time {
+    color: #DD0000;
+}
+
+.slot-time {
+    display: inline-block;
+    margin-left: 10px;
+    color: #333;
+}
+
+.slot-price {
+    display: inline-block;
+    color: #333;
+    margin-left: auto;
+}
+
+.schedule-heading {
+    font-family: 'GT Walsheim Trial', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.canvas {
+    background: #fff;
+    box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6, 0 -1px 0 #e6e6e6, 0 3px 13px rgba(0, 0, 0, .08);
+    ;
+    border-radius: 6px;
+    padding: 15px 0;
+}
