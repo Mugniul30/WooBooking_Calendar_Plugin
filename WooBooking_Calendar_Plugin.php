@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name:       WooBooking Calendar
- * Plugin URI:        https://wetechpro.com/
+ * Plugin URI:        https: //clientsync.tech
  * Description:       A flexible booking calendar with time slot management for WooCommerce.
  * Version:           1.0.0
  * Requires at least: 5.2
