@@ -53,9 +53,10 @@
 
         ob_start(); ?>
         <div class="canvas">
-            <span style="margin-left: 65%; margin-bottom: 15%; color:#333; font-weight: 500; font-size: 14px;">
+        <div class="availability">
+        <span style="color:#333; font-weight: 500; font-size: 14px;">
                 🔴 <strong>Booked</strong>&nbsp;&nbsp;🟢 <strong>Available</strong>
-            </span>
+            </span></div>
             <div id="calendar"></div>
         </div>
         <div id="slots"></div>

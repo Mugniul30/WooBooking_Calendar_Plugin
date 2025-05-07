@@ -92,6 +92,7 @@ final class WooBooking_Calendar_Plugin
         new Woobooking\Frontend\Assets();
         new Woobooking\Plugin\Settings();
         new Woobooking\Plugin\Booking();
+        new Woobooking\Plugin\Dependency();
     }
 }
 
